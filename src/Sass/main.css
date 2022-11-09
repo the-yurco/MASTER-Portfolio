@@ -72,6 +72,23 @@
     width: 100%;
   }
 }
+/* TRY */
+@-webkit-keyframes spinner {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+@keyframes spinner {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -107,6 +124,7 @@ h1, h2, h3, a, p {
   background-color: #0d1b36;
   height: 100vh;
   font-family: "Inter", sans-serif;
+  /*------------------------------------*/
   /*------------------------------------*/
 }
 .heroSection nav {
@@ -150,6 +168,29 @@ h1, h2, h3, a, p {
 }
 .heroSection #social_section, .heroSection #contact_section {
   flex-grow: 1;
+}
+.heroSection #left_slider {
+  position: absolute;
+  height: 400px;
+  width: 50px;
+  background-color: white;
+  top: 40%;
+}
+.heroSection #right_slider {
+  position: absolute;
+  height: 250px;
+  width: 50px;
+  background-color: white;
+  top: 20%;
+  right: 0;
+}
+.heroSection #right_slider2 {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  top: 52%;
+  right: 0;
 }
 .heroSection .text_container {
   position: absolute;
@@ -213,6 +254,15 @@ h1, h2, h3, a, p {
   }
   100% {
     width: 100%;
+  }
+}
+/* TRY */
+@keyframes spinner {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
   }
 }
 html {
@@ -287,6 +337,15 @@ img {
     width: 100%;
   }
 }
+/* TRY */
+@keyframes spinner {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -356,6 +415,15 @@ img {
   }
   100% {
     width: 100%;
+  }
+}
+/* TRY */
+@keyframes spinner {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
   }
 }
 html {

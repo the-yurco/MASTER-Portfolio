@@ -89,6 +89,38 @@ h1,h2,h3,a,p {
       flex-grow: 1;
     }
 
+
+    /*------------------------------------*/
+
+    #left_slider{
+      position: absolute;
+      height: 400px;
+      width: 50px;
+      background-color: white;
+
+      top: 40%;
+    }
+
+    #right_slider{
+      position: absolute;
+      height: 250px;
+      width: 50px;
+      background-color: white;
+
+      top: 20%;
+      right: 0;
+    }
+
+    #right_slider2{
+      position: absolute;
+      height: 50px;
+      width: 50px;
+      background-color: white;
+
+      top: 52%;
+      right: 0;
+    }
+
     /*------------------------------------*/
 
     .text_container{
