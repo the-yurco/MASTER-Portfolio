@@ -2,11 +2,28 @@
 @import './mixins';
 @import './keyframes';
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html {
+    @include html_reset;
 }
+  
+  *, *:before, *:after {
+    @include bfore_after;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    @include text_reset;
+  }
+  
+  ol, ul, a {
+    @include list_link_reset;
+  }
+  
+  img {
+    @include img_reset
+  }
+  
+/* ==================================================== */
+
 
 .about{
     background-color: yellow;

@@ -2,15 +2,119 @@
 @import './mixins';
 @import './keyframes';
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    font-family: monospace;
+html {
+    @include html_reset;
+}
+  
+  *, *:before, *:after {
+    @include bfore_after;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    @include text_reset;
+  }
+  
+  ol, ul, a {
+    @include list_link_reset;
+  }
+  
+  img {
+    @include img_reset
+  }
+  
+/* ==================================================== */
+
+h1,h2,h3,a,p {
+  color: white;
+  font-weight: 400;
 }
 
 .heroSection{
-    background-color: aqua;
+  background-color: $dark_color;
+  height: 100vh;
+  font-family: $font_family;
+
+    nav{
+      position: absolute;
+      display: flex;
+      width: 100%;
+      border-bottom: 1px solid $darker_color;
+
+      animation: slideInDown 1s;
+    }
+
+    nav > .nav_section{
+      padding: 1.5rem 2rem;
+      display: flex;
+      gap: 1rem;
+      border-left: 1px solid $darker_color;
+
+      align-items: center;
+      justify-content: center;
+    }
+
+    div#logo_section.nav_section{
+      justify-content: flex-start;
+
+      svg#logo path{
+        fill: rgb(255, 255, 255);
+
+        animation: logo_start 1.4s ease-in-out forwards;
+      }
+    }
+
+    #links_section{
+      gap: 5rem;
+      overflow: hidden;
+      white-space: nowrap;
+
+        /* typing text doesnt work */
+        // animation: blink_caret 0.75s step-end infinite, type_width 4s steps(5, end) infinite;
+
+    }
+
+    #social_section{
+      gap: 3rem;
+      
+      i{
+        font-size: 20px;
+      }
+    }
+
+    #logo_section, #links_section{
+      flex-basis: calc(100% / 3);
+    }
+
+    #social_section, #contact_section{
+      flex-grow: 1;
+    }
+
+    /*------------------------------------*/
+
+    .text_container{
+      position: absolute;
+      top: 25%;
+      bottom: 25%;
+      left: 10%;
+      right: 10%;
+
+      padding: 10px;
+
+      #upperheading{
+        font-size: 45px;
+        font-weight: $semiBold_font600;
+      }
+
+      #subheading{
+        font-size: 70px;
+        font-weight: $extraBold_font800;
+      }
+
+      #heading{
+        font-size: 200px;
+        font-weight: $extraBold_font800;
+        letter-spacing: 8px;
+        margin: -20px 0 20px -10px;
+      }
+    }
 }

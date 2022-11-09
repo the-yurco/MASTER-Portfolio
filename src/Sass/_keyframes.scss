@@ -1,2 +1,24 @@
 @import './variables';
 @import './mixins';
+
+@keyframes slideInDown {
+    0%   { margin-top: -10rem; }
+    100% { margin-top: 0rem; }
+}
+
+/* it needs to be done and i dont knwo how */
+/* total lenght doesnt work */
+@keyframes logo_start{
+    100% {stroke-dashoffset: 0%;}
+}
+
+/* somehow make writing text navbar */
+@keyframes blink_caret{
+    0%{border-color: transparent;}
+    100% {border-color: $darker_color;}
+}
+
+@keyframes type_width{
+    0% {width: 0;}
+    100% {width: 100%;}
+}
