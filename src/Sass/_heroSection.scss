@@ -114,25 +114,27 @@ h1,h2,h3,a,p {
       }
     }
 
-    a{
-      border:none;
-      position: relative;
-
-      &::after{
-        content: '';
-        position: absolute;
-        width: 0px;
-        height: 3px;
-        left: 50%;
-        bottom:-5px;
-        background-color: white;
-        border-radius: 3px;
-        transition: all ease-in-out .2s;
-      }
-
-      &:hover::after{
-        width: 100%;
-        left: 0;
+    #links_section, #social_section, #contact_section{
+      a{
+        border:none;
+        position: relative;
+  
+        &::after{
+          content: '';
+          position: absolute;
+          width: 0px;
+          height: 3px;
+          left: 50%;
+          bottom:-5px;
+          background-color: white;
+          border-radius: 3px;
+          transition: all ease-in-out .2s;
+        }
+  
+        &:hover::after{
+          width: 100%;
+          left: 0;
+        }
       }
     }
 

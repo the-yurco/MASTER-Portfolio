@@ -211,11 +211,11 @@ h1, h2, h3, a, p {
 .heroSection #social_section .YT {
   -webkit-animation-delay: 0.8s;
 }
-.heroSection a {
+.heroSection #links_section a, .heroSection #social_section a, .heroSection #contact_section a {
   border: none;
   position: relative;
 }
-.heroSection a::after {
+.heroSection #links_section a::after, .heroSection #social_section a::after, .heroSection #contact_section a::after {
   content: "";
   position: absolute;
   width: 0px;
@@ -226,7 +226,7 @@ h1, h2, h3, a, p {
   border-radius: 3px;
   transition: all ease-in-out 0.2s;
 }
-.heroSection a:hover::after {
+.heroSection #links_section a:hover::after, .heroSection #social_section a:hover::after, .heroSection #contact_section a:hover::after {
   width: 100%;
   left: 0;
 }
