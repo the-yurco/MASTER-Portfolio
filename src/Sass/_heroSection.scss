@@ -40,7 +40,7 @@ h1,h2,h3,a,p {
       width: 100%;
       border-bottom: 1px solid $darker_color;
 
-      animation: slideInDown 1s;
+      animation: slideInRight 1s;
     }
 
     nav > .nav_section{
@@ -71,13 +71,68 @@ h1,h2,h3,a,p {
         /* typing text doesnt work */
         // animation: blink_caret 0.75s step-end infinite, type_width 4s steps(5, end) infinite;
 
+        a{
+          -webkit-animation: links_icons_fade 0.6s ease-out;
+          -webkit-animation-iteration-count: none;
+          opacity: 1.0;
+        }
+
+        #services{
+          -webkit-animation-delay: 0.6s;
+        }
+
+        #projects{
+          -webkit-animation-delay: 0.7s;
+        }
+
+        #about{
+          -webkit-animation-delay: 0.8s;
+        }
     }
 
     #social_section{
       gap: 3rem;
       
       i{
-        font-size: 20px;
+        font-size: 23px;
+
+        -webkit-animation: links_icons_fade 1.7s ease-out;
+        -webkit-animation-iteration-count: none;
+        opacity: 1.0;
+      }
+
+      .IG{
+
+      }
+
+      .TW{
+        -webkit-animation-delay: 0.7s;
+      }
+
+      .YT{
+        -webkit-animation-delay: 0.8s;
+      }
+    }
+
+    a{
+      border:none;
+      position: relative;
+
+      &::after{
+        content: '';
+        position: absolute;
+        width: 0px;
+        height: 3px;
+        left: 50%;
+        bottom:-5px;
+        background-color: white;
+        border-radius: 3px;
+        transition: all ease-in-out .2s;
+      }
+
+      &:hover::after{
+        width: 100%;
+        left: 0;
       }
     }
 
@@ -85,8 +140,20 @@ h1,h2,h3,a,p {
       flex-basis: calc(100% / 3);
     }
 
+    #logo_section{
+      a:hover::after{
+        border: none;
+      }
+      
+    }
+
     #social_section, #contact_section{
       flex-grow: 1;
+    }
+
+    #contact_section{
+      animation: drop_down 0.5s;
+      animation-delay: 0.70s;
     }
 
 
@@ -99,6 +166,7 @@ h1,h2,h3,a,p {
       background-color: white;
 
       top: 40%;
+      z-index: 10000;
     }
 
     #right_slider{
@@ -109,6 +177,7 @@ h1,h2,h3,a,p {
 
       top: 20%;
       right: 0;
+      z-index: 10000;
     }
 
     #right_slider2{
@@ -119,6 +188,7 @@ h1,h2,h3,a,p {
 
       top: 52%;
       right: 0;
+      z-index: 10000;
     }
 
     /*------------------------------------*/
@@ -132,21 +202,51 @@ h1,h2,h3,a,p {
 
       padding: 10px;
 
+      .txt{
+        position: relative;
+        z-index: 10;
+      }
+
       #upperheading{
+
+        width: fit-content;
         font-size: 45px;
         font-weight: $semiBold_font600;
+
+        animation: move_text1 1.5s;
       }
 
       #subheading{
         font-size: 70px;
         font-weight: $extraBold_font800;
+        width: fit-content;
+
+        // animation: move_text 1s;
+
+        &::before{
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background-color: $dark_color;
+          border-left: 2px solid $darker_color;
+
+          animation: text_typing 8s steps(25) infinite;
+        }
       }
 
       #heading{
         font-size: 200px;
         font-weight: $extraBold_font800;
         letter-spacing: 8px;
-        margin: -20px 0 20px -10px;
+        margin: -5px 0 5px -10px;
+        color: transparent;
+
+        animation: move_text2 1s;
+
+        -webkit-text-stroke: 2px white;
       }
     }
 }

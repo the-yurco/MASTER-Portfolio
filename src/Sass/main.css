@@ -11,87 +11,112 @@
 /* COLOR PALLETE */
 /*  */
 /* RESET DEFAULT VALUES */
-@-webkit-keyframes slideInDown {
+@-webkit-keyframes slideInRight {
   0% {
-    margin-top: -10rem;
+    margin-left: -1000rem;
   }
   100% {
-    margin-top: 0rem;
+    margin-left: 0rem;
   }
 }
-@keyframes slideInDown {
+@keyframes slideInRight {
   0% {
-    margin-top: -10rem;
+    margin-left: -1000rem;
   }
   100% {
-    margin-top: 0rem;
+    margin-left: 0rem;
   }
 }
-/* it needs to be done and i dont knwo how */
-/* total lenght doesnt work */
-@-webkit-keyframes logo_start {
-  100% {
-    stroke-dashoffset: 0%;
-  }
-}
-@keyframes logo_start {
-  100% {
-    stroke-dashoffset: 0%;
-  }
-}
-/* somehow make writing text navbar */
-@-webkit-keyframes blink_caret {
+@-webkit-keyframes links_icons_fade {
   0% {
-    border-color: transparent;
+    opacity: 0.5;
+    transform: scale(0);
   }
   100% {
-    border-color: #394867;
+    opacity: 1;
+    -webkit-transform: scale(1);
   }
 }
-@keyframes blink_caret {
+@-webkit-keyframes drop_down {
   0% {
-    border-color: transparent;
+    margin-right: -50rem;
   }
   100% {
-    border-color: #394867;
+    margin-right: 0rem;
   }
 }
-@-webkit-keyframes type_width {
+@keyframes drop_down {
   0% {
-    width: 0;
+    margin-right: -50rem;
   }
   100% {
-    width: 100%;
+    margin-right: 0rem;
   }
 }
-@keyframes type_width {
+@-webkit-keyframes move_text1 {
   0% {
-    width: 0;
+    right: -700rem;
+  }
+  50% {
+    right: 20rem;
   }
   100% {
-    width: 100%;
+    right: 0rem;
   }
 }
-/* TRY */
-@-webkit-keyframes spinner {
-  from {
-    transform: rotateY(0deg);
+@keyframes move_text1 {
+  0% {
+    right: -700rem;
   }
-  to {
-    transform: rotateY(-360deg);
+  50% {
+    right: 20rem;
+  }
+  100% {
+    right: 0rem;
   }
 }
-@keyframes spinner {
-  from {
-    transform: rotateY(0deg);
+@-webkit-keyframes move_text2 {
+  0% {
+    right: -700rem;
   }
-  to {
-    transform: rotateY(-360deg);
+  50% {
+    right: 40rem;
+  }
+  100% {
+    right: 0rem;
+  }
+}
+@keyframes move_text2 {
+  0% {
+    right: -700rem;
+  }
+  50% {
+    right: 40rem;
+  }
+  100% {
+    right: 0rem;
+  }
+}
+@-webkit-keyframes text_typing {
+  40%, 60% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+@keyframes text_typing {
+  40%, 60% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
   }
 }
 html {
   box-sizing: border-box;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 *, *:before, *:after {
@@ -123,7 +148,7 @@ h1, h2, h3, a, p {
 .heroSection {
   background-color: #0d1b36;
   height: 100vh;
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
   /*------------------------------------*/
   /*------------------------------------*/
 }
@@ -132,8 +157,8 @@ h1, h2, h3, a, p {
   display: flex;
   width: 100%;
   border-bottom: 1px solid #394867;
-  -webkit-animation: slideInDown 1s;
-          animation: slideInDown 1s;
+  -webkit-animation: slideInRight 1s;
+          animation: slideInRight 1s;
 }
 .heroSection nav > .nav_section {
   padding: 1.5rem 2rem;
@@ -157,17 +182,68 @@ h1, h2, h3, a, p {
   white-space: nowrap;
   /* typing text doesnt work */
 }
+.heroSection #links_section a {
+  -webkit-animation: links_icons_fade 0.6s ease-out;
+  -webkit-animation-iteration-count: none;
+  opacity: 1;
+}
+.heroSection #links_section #services {
+  -webkit-animation-delay: 0.6s;
+}
+.heroSection #links_section #projects {
+  -webkit-animation-delay: 0.7s;
+}
+.heroSection #links_section #about {
+  -webkit-animation-delay: 0.8s;
+}
 .heroSection #social_section {
   gap: 3rem;
 }
 .heroSection #social_section i {
-  font-size: 20px;
+  font-size: 23px;
+  -webkit-animation: links_icons_fade 1.7s ease-out;
+  -webkit-animation-iteration-count: none;
+  opacity: 1;
+}
+.heroSection #social_section .TW {
+  -webkit-animation-delay: 0.7s;
+}
+.heroSection #social_section .YT {
+  -webkit-animation-delay: 0.8s;
+}
+.heroSection a {
+  border: none;
+  position: relative;
+}
+.heroSection a::after {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 3px;
+  left: 50%;
+  bottom: -5px;
+  background-color: white;
+  border-radius: 3px;
+  transition: all ease-in-out 0.2s;
+}
+.heroSection a:hover::after {
+  width: 100%;
+  left: 0;
 }
 .heroSection #logo_section, .heroSection #links_section {
   flex-basis: 33.3333333333%;
 }
+.heroSection #logo_section a:hover::after {
+  border: none;
+}
 .heroSection #social_section, .heroSection #contact_section {
   flex-grow: 1;
+}
+.heroSection #contact_section {
+  -webkit-animation: drop_down 0.5s;
+          animation: drop_down 0.5s;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
 }
 .heroSection #left_slider {
   position: absolute;
@@ -175,6 +251,7 @@ h1, h2, h3, a, p {
   width: 50px;
   background-color: white;
   top: 40%;
+  z-index: 10000;
 }
 .heroSection #right_slider {
   position: absolute;
@@ -183,6 +260,7 @@ h1, h2, h3, a, p {
   background-color: white;
   top: 20%;
   right: 0;
+  z-index: 10000;
 }
 .heroSection #right_slider2 {
   position: absolute;
@@ -191,6 +269,7 @@ h1, h2, h3, a, p {
   background-color: white;
   top: 52%;
   right: 0;
+  z-index: 10000;
 }
 .heroSection .text_container {
   position: absolute;
@@ -200,19 +279,47 @@ h1, h2, h3, a, p {
   right: 10%;
   padding: 10px;
 }
+.heroSection .text_container .txt {
+  position: relative;
+  z-index: 10;
+}
 .heroSection .text_container #upperheading {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   font-size: 45px;
   font-weight: 600;
+  -webkit-animation: move_text1 1.5s;
+          animation: move_text1 1.5s;
 }
 .heroSection .text_container #subheading {
   font-size: 70px;
   font-weight: 800;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.heroSection .text_container #subheading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #0d1b36;
+  border-left: 2px solid #394867;
+  -webkit-animation: text_typing 8s steps(25) infinite;
+          animation: text_typing 8s steps(25) infinite;
 }
 .heroSection .text_container #heading {
   font-size: 200px;
   font-weight: 800;
   letter-spacing: 8px;
-  margin: -20px 0 20px -10px;
+  margin: -5px 0 5px -10px;
+  color: transparent;
+  -webkit-animation: move_text2 1s;
+          animation: move_text2 1s;
+  -webkit-text-stroke: 2px white;
 }
 
 /* VARIABLES */
@@ -224,50 +331,66 @@ h1, h2, h3, a, p {
 /* COLOR PALLETE */
 /*  */
 /* RESET DEFAULT VALUES */
-@keyframes slideInDown {
+@keyframes slideInRight {
   0% {
-    margin-top: -10rem;
+    margin-left: -1000rem;
   }
   100% {
-    margin-top: 0rem;
+    margin-left: 0rem;
   }
 }
-/* it needs to be done and i dont knwo how */
-/* total lenght doesnt work */
-@keyframes logo_start {
-  100% {
-    stroke-dashoffset: 0%;
-  }
-}
-/* somehow make writing text navbar */
-@keyframes blink_caret {
+@-webkit-keyframes links_icons_fade {
   0% {
-    border-color: transparent;
+    opacity: 0.5;
+    transform: scale(0);
   }
   100% {
-    border-color: #394867;
+    opacity: 1;
+    -webkit-transform: scale(1);
   }
 }
-@keyframes type_width {
+@keyframes drop_down {
   0% {
-    width: 0;
+    margin-right: -50rem;
   }
   100% {
-    width: 100%;
+    margin-right: 0rem;
   }
 }
-/* TRY */
-@keyframes spinner {
-  from {
-    transform: rotateY(0deg);
+@keyframes move_text1 {
+  0% {
+    right: -700rem;
   }
-  to {
-    transform: rotateY(-360deg);
+  50% {
+    right: 20rem;
+  }
+  100% {
+    right: 0rem;
+  }
+}
+@keyframes move_text2 {
+  0% {
+    right: -700rem;
+  }
+  50% {
+    right: 40rem;
+  }
+  100% {
+    right: 0rem;
+  }
+}
+@keyframes text_typing {
+  40%, 60% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
   }
 }
 html {
   box-sizing: border-box;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 *, *:before, *:after {
@@ -305,50 +428,66 @@ img {
 /* COLOR PALLETE */
 /*  */
 /* RESET DEFAULT VALUES */
-@keyframes slideInDown {
+@keyframes slideInRight {
   0% {
-    margin-top: -10rem;
+    margin-left: -1000rem;
   }
   100% {
-    margin-top: 0rem;
+    margin-left: 0rem;
   }
 }
-/* it needs to be done and i dont knwo how */
-/* total lenght doesnt work */
-@keyframes logo_start {
-  100% {
-    stroke-dashoffset: 0%;
-  }
-}
-/* somehow make writing text navbar */
-@keyframes blink_caret {
+@-webkit-keyframes links_icons_fade {
   0% {
-    border-color: transparent;
+    opacity: 0.5;
+    transform: scale(0);
   }
   100% {
-    border-color: #394867;
+    opacity: 1;
+    -webkit-transform: scale(1);
   }
 }
-@keyframes type_width {
+@keyframes drop_down {
   0% {
-    width: 0;
+    margin-right: -50rem;
   }
   100% {
-    width: 100%;
+    margin-right: 0rem;
   }
 }
-/* TRY */
-@keyframes spinner {
-  from {
-    transform: rotateY(0deg);
+@keyframes move_text1 {
+  0% {
+    right: -700rem;
   }
-  to {
-    transform: rotateY(-360deg);
+  50% {
+    right: 20rem;
+  }
+  100% {
+    right: 0rem;
+  }
+}
+@keyframes move_text2 {
+  0% {
+    right: -700rem;
+  }
+  50% {
+    right: 40rem;
+  }
+  100% {
+    right: 0rem;
+  }
+}
+@keyframes text_typing {
+  40%, 60% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
   }
 }
 html {
   box-sizing: border-box;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 *, *:before, *:after {
@@ -385,50 +524,66 @@ img {
 /* COLOR PALLETE */
 /*  */
 /* RESET DEFAULT VALUES */
-@keyframes slideInDown {
+@keyframes slideInRight {
   0% {
-    margin-top: -10rem;
+    margin-left: -1000rem;
   }
   100% {
-    margin-top: 0rem;
+    margin-left: 0rem;
   }
 }
-/* it needs to be done and i dont knwo how */
-/* total lenght doesnt work */
-@keyframes logo_start {
-  100% {
-    stroke-dashoffset: 0%;
-  }
-}
-/* somehow make writing text navbar */
-@keyframes blink_caret {
+@-webkit-keyframes links_icons_fade {
   0% {
-    border-color: transparent;
+    opacity: 0.5;
+    transform: scale(0);
   }
   100% {
-    border-color: #394867;
+    opacity: 1;
+    -webkit-transform: scale(1);
   }
 }
-@keyframes type_width {
+@keyframes drop_down {
   0% {
-    width: 0;
+    margin-right: -50rem;
   }
   100% {
-    width: 100%;
+    margin-right: 0rem;
   }
 }
-/* TRY */
-@keyframes spinner {
-  from {
-    transform: rotateY(0deg);
+@keyframes move_text1 {
+  0% {
+    right: -700rem;
   }
-  to {
-    transform: rotateY(-360deg);
+  50% {
+    right: 20rem;
+  }
+  100% {
+    right: 0rem;
+  }
+}
+@keyframes move_text2 {
+  0% {
+    right: -700rem;
+  }
+  50% {
+    right: 40rem;
+  }
+  100% {
+    right: 0rem;
+  }
+}
+@keyframes text_typing {
+  40%, 60% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
   }
 }
 html {
   box-sizing: border-box;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 *, *:before, *:after {

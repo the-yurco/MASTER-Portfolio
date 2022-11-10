@@ -3,6 +3,7 @@
 @mixin html_reset {
     box-sizing: border-box;
     font-size: 16px;
+    overflow-x: hidden;
 }
 
 @mixin bfore_after {
