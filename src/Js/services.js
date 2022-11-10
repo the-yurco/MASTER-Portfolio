@@ -2,6 +2,3 @@
 
 import './heroSection';
 
-if(scroll > 890){
-    leftSlider.style.backgroundColor = 'yellow'
-}

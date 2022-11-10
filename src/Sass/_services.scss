@@ -25,6 +25,39 @@ html {
 /* ==================================================== */
 
 .servicesSection{
+    position: relative;
     height: 100vh;
     background-color: white;
+
+    font-family: $font_family;
+
+    #top_slider{
+      position: absolute;
+      top: 10px;
+      right: 0;
+
+      height: 40px;
+      width: 400px;
+      background-color: $dark_color;
+    }
+
+    #top_slider2{
+      position: absolute;
+      top: 10px;
+      right: 410px;
+
+      height: 40px;
+      width: 40px;
+      background-color: $dark_color;
+    }
+
+    #bottom_slider{
+      position: absolute;
+      left: 5rem;
+      bottom: 0;
+
+      height: 40px;
+      width: 400px;
+      background-color: $dark_color;
+    }
 }

@@ -22,9 +22,9 @@ window.addEventListener('scroll', () => {
     let scrollValue = window.scrollY;
     // let scrollPosition = window.pageYOffset;
 
-    leftSlider.style.marginTop = scrollValue * 1 + 'px';
-    rightSlider.style.marginTop = scrollValue * 2.815 + 'px';
-    rightSlider2.style.marginTop = scrollValue * 2.815 + 'px';
+    leftSlider.style.left = scrollValue * -1 + 'px';
+    rightSlider.style.right = scrollValue * -2.815 + 'px';
+    rightSlider2.style.right = scrollValue * -2.815 + 'px';
 
     upperheading.style.left = scrollValue * 3 + 'px';
     heading.style.right = scrollValue * 2 + 'px';
