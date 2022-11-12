@@ -557,10 +557,15 @@ img {
 /* ==================================================== */
 .servicesSection {
   position: relative;
-  height: 100vh;
-  background-color: white;
+  height: 500vh;
+  background-color: #0d1b36;
+  padding-top: 100px;
   font-family: "Poppins", sans-serif;
+  transition: background 0.5s ease;
   /*------------------------------------*/
+}
+.servicesSection .color-white {
+  background-color: white;
 }
 .servicesSection #top_slider {
   position: absolute;
@@ -587,6 +592,19 @@ img {
   background-color: #0d1b36;
 }
 .servicesSection .services_header_container .text_h2 {
+  position: absolute;
+  top: 50px;
+  margin-bottom: 50px;
+  font-size: 70px;
+  font-weight: 800;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #0d1b36;
+}
+.servicesSection .services_header_container .fixed {
+  position: fixed;
+  top: 50px;
   margin-bottom: 50px;
   font-size: 70px;
   font-weight: 800;
@@ -596,6 +614,19 @@ img {
   color: #0d1b36;
 }
 .servicesSection .first_container_sides h4 {
+  display: none;
+  font-size: 20px;
+  font-weight: 800;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #0d1b36;
+}
+.servicesSection .first_container_sides #first_text_container {
+  transition: color 0.5s ease;
+}
+.servicesSection .first_container_sides .fixed2 {
+  position: fixed;
   font-size: 20px;
   font-weight: 800;
   width: -webkit-fit-content;
