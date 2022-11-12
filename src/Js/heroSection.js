@@ -19,7 +19,7 @@ let subheading = document.querySelector('#subheading');
 let links_txt_animation = document.querySelector('.nav_section');
 
 window.addEventListener('scroll', () => {
-    let scrollValue = window.scrollY;
+    const scrollValue = window.scrollY;
     // let scrollPosition = window.pageYOffset;
 
     leftSlider.style.left = scrollValue * -1 + 'px';

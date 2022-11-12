@@ -169,6 +169,8 @@ h1,h2,h3,a,p {
 
       top: 40%;
       z-index: 10000;
+
+      animation: left_slider_drop 1s;
     }
 
     #right_slider{
@@ -180,6 +182,9 @@ h1,h2,h3,a,p {
       top: 20%;
       right: 0;
       z-index: 10000;
+
+      animation: right_slider_drop 1s;
+      animation-delay: 0.1s;
     }
 
     #right_slider2{
@@ -191,6 +196,9 @@ h1,h2,h3,a,p {
       top: 52%;
       right: 0;
       z-index: 10000;
+
+      animation: right2_slider_drop 1s;
+      animation-delay: 0.05s;
     }
 
     /*------------------------------------*/
