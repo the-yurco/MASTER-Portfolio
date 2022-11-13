@@ -231,25 +231,67 @@
   }
 }
 @-webkit-keyframes move_h2_animation {
-  0% {
+  0%, 100% {
     left: -100rem;
+    transform: scale(0.5);
+    opacity: 1;
   }
   50% {
-    left: 80%;
+    left: 95%;
+    transform: scale(1.25);
+    opacity: 1;
   }
-  100% {
+  75% {
+    left: 10%;
+    transform: scale(1.25);
+    opacity: 1;
+  }
+  99% {
     left: 40%;
+    transform: scale(1000);
+    opacity: 1;
   }
 }
 @keyframes move_h2_animation {
-  0% {
+  0%, 100% {
     left: -100rem;
+    transform: scale(0.5);
+    opacity: 1;
   }
   50% {
-    left: 80%;
+    left: 95%;
+    transform: scale(1.25);
+    opacity: 1;
+  }
+  75% {
+    left: 10%;
+    transform: scale(1.25);
+    opacity: 1;
+  }
+  99% {
+    left: 40%;
+    transform: scale(1000);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes show_one_by_one {
+  0% {
+    opacity: 0.5;
+    transform: scale(0);
   }
   100% {
-    left: 40%;
+    opacity: 1;
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes show_one_by_one {
+  0% {
+    opacity: 0.5;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
   }
 }
 html {
@@ -596,14 +638,35 @@ h1, h2, h3, a, p {
   }
 }
 @keyframes move_h2_animation {
-  0% {
+  0%, 100% {
     left: -100rem;
+    transform: scale(0.5);
+    opacity: 1;
   }
   50% {
-    left: 80%;
+    left: 95%;
+    transform: scale(1.25);
+    opacity: 1;
+  }
+  75% {
+    left: 10%;
+    transform: scale(1.25);
+    opacity: 1;
+  }
+  99% {
+    left: 40%;
+    transform: scale(1000);
+    opacity: 1;
+  }
+}
+@keyframes show_one_by_one {
+  0% {
+    opacity: 0.5;
+    transform: scale(0);
   }
   100% {
-    left: 40%;
+    opacity: 1;
+    -webkit-transform: scale(1);
   }
 }
 html {
@@ -773,16 +836,47 @@ img {
   left: 40%;
   font-size: 72px;
   font-weight: 800;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   color: #0d1b36;
-  -webkit-animation: move_h2_animation 0.4s;
-          animation: move_h2_animation 0.4s;
+  -webkit-animation-name: move_h2_animation;
+          animation-name: move_h2_animation;
+  -webkit-animation-duration: 2.3s;
+          animation-duration: 2.3s;
+  -webkit-animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .servicesSection .second_container_side video {
   position: absolute;
   z-index: 1;
+}
+.servicesSection .third_container_side {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 10%;
+  right: 10%;
+  gap: 10px;
+  opacity: 0;
+}
+.servicesSection .third_container_side .container {
+  background-color: #0d1b36;
+  color: white;
+  height: 500px;
+  opacity: 0;
+}
+.servicesSection .third_container_side .show_containers {
+  position: fixed;
+  top: 200px;
+  background-color: #0d1b36;
+  color: white;
+  height: 500px;
+  opacity: 1;
+  -webkit-animation: show_one_by_one 0.5s;
+          animation: show_one_by_one 0.5s;
+  transition: opacity 0.5s;
 }
 
 /* VARIABLES */
@@ -910,14 +1004,35 @@ img {
   }
 }
 @keyframes move_h2_animation {
-  0% {
+  0%, 100% {
     left: -100rem;
+    transform: scale(0.5);
+    opacity: 1;
   }
   50% {
-    left: 80%;
+    left: 95%;
+    transform: scale(1.25);
+    opacity: 1;
+  }
+  75% {
+    left: 10%;
+    transform: scale(1.25);
+    opacity: 1;
+  }
+  99% {
+    left: 40%;
+    transform: scale(1000);
+    opacity: 1;
+  }
+}
+@keyframes show_one_by_one {
+  0% {
+    opacity: 0.5;
+    transform: scale(0);
   }
   100% {
-    left: 40%;
+    opacity: 1;
+    -webkit-transform: scale(1);
   }
 }
 html {
@@ -1076,14 +1191,35 @@ img {
   }
 }
 @keyframes move_h2_animation {
-  0% {
+  0%, 100% {
     left: -100rem;
+    transform: scale(0.5);
+    opacity: 1;
   }
   50% {
-    left: 80%;
+    left: 95%;
+    transform: scale(1.25);
+    opacity: 1;
+  }
+  75% {
+    left: 10%;
+    transform: scale(1.25);
+    opacity: 1;
+  }
+  99% {
+    left: 40%;
+    transform: scale(1000);
+    opacity: 1;
+  }
+}
+@keyframes show_one_by_one {
+  0% {
+    opacity: 0.5;
+    transform: scale(0);
   }
   100% {
-    left: 40%;
+    opacity: 1;
+    -webkit-transform: scale(1);
   }
 }
 html {

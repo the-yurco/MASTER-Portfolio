@@ -87,13 +87,35 @@
 }
 
 @keyframes move_h2_animation {
-  0%{
+  0% , 100%{
     left: -100rem;
+    transform: scale(0.5);
+    opacity: 1;
   }
   50%{
-    left: 80%;
+    left: 95%;
+    transform: scale(1.25);
+    opacity: 1;
   }
-  100%{
+  75%{
+    left: 10%;
+    transform: scale(1.25);
+    opacity: 1;
+  }
+  99%{
     left: 40%;
+    transform: scale(1000);
+    opacity: 1;
+  }
+}
+
+@keyframes show_one_by_one {
+  0% {
+      opacity: 0.5;
+      transform: scale(0);
+  }
+  100% {
+      opacity: 1;
+      -webkit-transform: scale(1.0);
   }
 }

@@ -13,6 +13,11 @@ let h4_third_text = document.querySelector('.third_text_container')
 let h1_parallax_translateX = document.querySelector('.translateX_left_h1');
 let h2_parallax_move = document.querySelector('.move_text_h2');
 
+let container = document.querySelector('container');
+let container1 = document.querySelector('.container1');
+let container2 = document.querySelector('.container2');
+let container3 = document.querySelector('.container3');
+
 // let h2_text = document.querySelector('.text_h2');
 const h2_text = document.querySelector('.text_h2');
 
@@ -78,11 +83,11 @@ window.addEventListener('scroll', () => {
         h1_parallax_translateX.classList.remove('translate_h1');
         // h1_parallax_translateX.classList.add('translateX_left_h1');
 
-        h2_parallax_move.classList.remove('move_text_h2')
+        h2_parallax_move.classList.remove('move_text_h2');
         h2_parallax_move.classList.add('move_h2');
     }
 
-    if(scrollValue > 4400){
+    if(scrollValue > 4100){
         h2_parallax_move.classList.remove('move_h2')
 
         
