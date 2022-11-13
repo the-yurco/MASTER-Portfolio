@@ -180,24 +180,76 @@
   }
 }
 /*======================*/
-@-webkit-keyframes h2_animation {
+@-webkit-keyframes h4_text_animation {
   0% {
-    transform: translateY(0px);
-    opacity: 0.5;
+    opacity: 1;
   }
   100% {
-    transform: translateY(3px);
+    opacity: 0;
+  }
+}
+@keyframes h4_text_animation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes jump_scale {
+  0% {
+    transform: scale(0);
+    top: 600px;
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1);
+    top: 300px;
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    top: 400px;
     opacity: 1;
   }
 }
-@keyframes h2_animation {
+@keyframes jump_scale {
   0% {
-    transform: translateY(0px);
-    opacity: 0.5;
+    transform: scale(0);
+    top: 600px;
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1);
+    top: 300px;
+    opacity: 1;
   }
   100% {
-    transform: translateY(3px);
+    transform: scale(1);
+    top: 400px;
     opacity: 1;
+  }
+}
+@-webkit-keyframes move_h2_animation {
+  0% {
+    left: -100rem;
+  }
+  50% {
+    left: 80%;
+  }
+  100% {
+    left: 40%;
+  }
+}
+@keyframes move_h2_animation {
+  0% {
+    left: -100rem;
+  }
+  50% {
+    left: 80%;
+  }
+  100% {
+    left: 40%;
   }
 }
 html {
@@ -518,14 +570,40 @@ h1, h2, h3, a, p {
   }
 }
 /*======================*/
-@keyframes h2_animation {
+@keyframes h4_text_animation {
   0% {
-    transform: translateY(0px);
-    opacity: 0.5;
+    opacity: 1;
   }
   100% {
-    transform: translateY(3px);
+    opacity: 0;
+  }
+}
+@keyframes jump_scale {
+  0% {
+    transform: scale(0);
+    top: 600px;
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1);
+    top: 300px;
     opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    top: 400px;
+    opacity: 1;
+  }
+}
+@keyframes move_h2_animation {
+  0% {
+    left: -100rem;
+  }
+  50% {
+    left: 80%;
+  }
+  100% {
+    left: 40%;
   }
 }
 html {
@@ -557,9 +635,9 @@ img {
 /* ==================================================== */
 .servicesSection {
   position: relative;
-  height: 500vh;
+  height: 1000vh;
   background-color: #0d1b36;
-  padding-top: 100px;
+  padding: 100px 10%;
   font-family: "Poppins", sans-serif;
   transition: background 0.5s ease;
   /*------------------------------------*/
@@ -613,46 +691,94 @@ img {
   width: fit-content;
   color: #0d1b36;
 }
-.servicesSection .first_container_sides h4 {
-  display: none;
+.servicesSection .first_container_sides {
+  /* i will make for every text container */
+}
+.servicesSection .first_container_sides .first_text_container, .servicesSection .first_container_sides .second_text_container, .servicesSection .first_container_sides .third_text_container {
   font-size: 20px;
   font-weight: 800;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   color: #0d1b36;
-}
-.servicesSection .first_container_sides #first_text_container {
-  transition: color 0.5s ease;
+  opacity: 0;
+  -webkit-animation: h4_text_animation 0.4s;
+          animation: h4_text_animation 0.4s;
+  transition: opacity 1s;
 }
 .servicesSection .first_container_sides .fixed2 {
   position: fixed;
-  font-size: 20px;
+  top: 400px;
+  font-size: 36px;
   font-weight: 800;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   color: #0d1b36;
+  opacity: 1;
+  transition: opacity 1s;
 }
-.servicesSection .second_container_side h1 {
-  position: absolute;
-  font-size: 200px;
+.servicesSection .first_container_sides .fixed3 {
+  position: fixed;
+  top: 500px;
+  right: 10%;
+  font-size: 36px;
   font-weight: 800;
-  letter-spacing: 8px;
-  margin: -5px 0 5px -10px;
-  color: transparent;
-  width: 500%;
-  left: 150rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #0d1b36;
+  opacity: 1;
+  transition: opacity 1s;
+}
+.servicesSection .second_container_side .translateX_left_h1 {
+  font-size: 700px;
+  font-weight: 800;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #0d1b36;
+  opacity: 0;
+  -webkit-animation: h4_text_animation 0.4s;
+          animation: h4_text_animation 0.4s;
+  transition: opacity 1s;
+}
+.servicesSection .second_container_side .translate_h1 {
+  position: fixed;
+  top: 400px;
+  right: 5%;
+  left: 5%;
+  font-size: 120px;
+  font-weight: 800;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: white;
   -webkit-text-stroke: 2px #0d1b36;
-  z-index: 100;
+  -webkit-animation: jump_scale 1s;
+          animation: jump_scale 1s;
 }
-.servicesSection .second_container_side h3 {
-  font-size: 30px;
+.servicesSection .second_container_side .scale_text_h2 {
+  font-size: 36px;
   font-weight: 800;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   color: #0d1b36;
+  opacity: 0;
+}
+.servicesSection .second_container_side .move_h2 {
+  position: fixed;
+  top: 400px;
+  left: 40%;
+  font-size: 72px;
+  font-weight: 800;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #0d1b36;
+  -webkit-animation: move_h2_animation 0.4s;
+          animation: move_h2_animation 0.4s;
 }
 .servicesSection .second_container_side video {
   position: absolute;
@@ -758,14 +884,40 @@ img {
   }
 }
 /*======================*/
-@keyframes h2_animation {
+@keyframes h4_text_animation {
   0% {
-    transform: translateY(0px);
-    opacity: 0.5;
+    opacity: 1;
   }
   100% {
-    transform: translateY(3px);
+    opacity: 0;
+  }
+}
+@keyframes jump_scale {
+  0% {
+    transform: scale(0);
+    top: 600px;
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1);
+    top: 300px;
     opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    top: 400px;
+    opacity: 1;
+  }
+}
+@keyframes move_h2_animation {
+  0% {
+    left: -100rem;
+  }
+  50% {
+    left: 80%;
+  }
+  100% {
+    left: 40%;
   }
 }
 html {
@@ -898,14 +1050,40 @@ img {
   }
 }
 /*======================*/
-@keyframes h2_animation {
+@keyframes h4_text_animation {
   0% {
-    transform: translateY(0px);
-    opacity: 0.5;
+    opacity: 1;
   }
   100% {
-    transform: translateY(3px);
+    opacity: 0;
+  }
+}
+@keyframes jump_scale {
+  0% {
+    transform: scale(0);
+    top: 600px;
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1);
+    top: 300px;
     opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    top: 400px;
+    opacity: 1;
+  }
+}
+@keyframes move_h2_animation {
+  0% {
+    left: -100rem;
+  }
+  50% {
+    left: 80%;
+  }
+  100% {
+    left: 40%;
   }
 }
 html {

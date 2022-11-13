@@ -26,9 +26,9 @@ html {
 
 .servicesSection{
     position: relative;
-    height: 500vh;
+    height: 1000vh;
     background-color: $dark_color;
-    padding-top: 100px;
+    padding: 100px 10%;
 
     font-family: $font_family;
 
@@ -71,6 +71,7 @@ html {
     /*------------------------------------*/
 
     .services_header_container{
+
       .text_h2{
         position: absolute;
         top: 50px;
@@ -97,48 +98,92 @@ html {
     }
 
     .first_container_sides{
-      h4{
-        display: none;
+      .first_text_container, .second_text_container, .third_text_container{
         font-size: 20px;
         font-weight: $extraBold_font800;
         width: fit-content;
         color: $dark_color;
+        opacity: 0;
+
+        animation: h4_text_animation 0.4s;
+        transition: opacity 1s;
       }
 
-      #first_text_container{
-        transition: color 0.5s ease;
-      }
+      /* i will make for every text container */
 
       .fixed2{
         position: fixed;
-        font-size: 20px;
+        top: 400px;
+        font-size: 36px;
         font-weight: $extraBold_font800;
         width: fit-content;
         color: $dark_color;
+        opacity: 1;
+
+        transition: opacity 1s;
+      }
+
+      .fixed3{
+        position: fixed;
+        top: 500px;
+        right: 10%;
+        font-size: 36px;
+        font-weight: $extraBold_font800;
+        width: fit-content;
+        color: $dark_color;
+        opacity: 1;
+
+        transition: opacity 1s;
       }
     }
 
     .second_container_side{
-      h1{
-        position: absolute;
-        font-size: 200px;
-        font-weight: $extraBold_font800;
-        letter-spacing: 8px;
-        margin: -5px 0 5px -10px;
-        color: transparent;
-        width: 500%;
-        left: 150rem;
-
-        -webkit-text-stroke: 2px $dark_color;
-        z-index: 100;
-      }
-
-      h3{
-        font-size: 30px;
+      .translateX_left_h1{
+        font-size: 700px;
         font-weight: $extraBold_font800;
         width: fit-content;
         color: $dark_color;
+        opacity: 0;
+
+        animation: h4_text_animation 0.4s;
+        transition: opacity 1s;
       }
+
+      .translate_h1{
+        position: fixed;
+        top: 400px;
+        right: 5%;
+        left: 5%;
+        font-size: 120px;
+        font-weight: $extraBold_font800;
+        width: fit-content;
+        color: white;
+        -webkit-text-stroke: 2px $dark_color;
+
+        animation: jump_scale 1s;
+
+      }
+
+      .scale_text_h2{
+        font-size: 36px;
+        font-weight: $extraBold_font800;
+        width: fit-content;
+        color: $dark_color;
+        opacity: 0;
+      }
+
+      .move_h2{
+        position: fixed;
+        top: 400px;
+        left: 40%;
+        font-size: 72px;
+        font-weight: $extraBold_font800;
+        width: fit-content;
+        color: $dark_color;
+
+
+        animation: move_h2_animation 0.4s;
+      }      
 
       video{
         position: absolute;
