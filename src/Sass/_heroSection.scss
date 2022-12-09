@@ -31,23 +31,25 @@ h1,h2,h3,a,p {
 
 .heroSection{
   background-color: $dark_color;
-  height: 100vh;
+  height: 56.125166444740344vw;
   font-family: $font_family;
+  font-size: 0.8vw;
+  position: relative;
 
     nav{
       position: absolute;
       display: flex;
-      width: 100%;
+      width: 100vw;
       border-bottom: 1px solid $darker_color;
 
       animation: slideInRight 1s;
     }
 
     nav > .nav_section{
-      padding: 1.5rem 2rem;
+      padding:  2vw 3.33vw;
       display: flex;
-      gap: 1rem;
-      border-left: 1px solid $darker_color;
+      gap: 1.66vw;
+      border-left: 0.104vw solid $darker_color;
 
       align-items: center;
       justify-content: center;
@@ -64,7 +66,7 @@ h1,h2,h3,a,p {
     }
 
     #links_section{
-      gap: 5rem;
+      gap: 6vw;
       overflow: hidden;
       white-space: nowrap;
 
@@ -91,10 +93,10 @@ h1,h2,h3,a,p {
     }
 
     #social_section{
-      gap: 3rem;
+      gap: 5vw;
       
       i{
-        font-size: 23px;
+        font-size: 1.198vw;
 
         -webkit-animation: links_icons_fade 1.7s ease-out;
         -webkit-animation-iteration-count: none;
@@ -117,17 +119,17 @@ h1,h2,h3,a,p {
     #links_section, #social_section, #contact_section{
       a{
         border:none;
-        position: relative;
+        // position: relative;
   
         &::after{
           content: '';
           position: absolute;
           width: 0px;
-          height: 3px;
-          left: 50%;
-          bottom:-5px;
+          height: 0.156vw;
+          left: 50vw;
+          bottom:-0.260vw;
           background-color: white;
-          border-radius: 3px;
+          border-radius: 0.156vw;
           transition: all ease-in-out .2s;
         }
   
@@ -138,11 +140,15 @@ h1,h2,h3,a,p {
       }
     }
 
-    #logo_section, #links_section{
+     #links_section{
       flex-basis: calc(100% / 3);
     }
 
     #logo_section{
+      padding: 0 2.500vw;
+      svg{
+        height: 3.375vw;
+      }
       a:hover::after{
         border: none;
       }
@@ -162,9 +168,9 @@ h1,h2,h3,a,p {
     /*------------------------------------*/
 
     #left_slider{
-      position: absolute;
-      height: 400px;
-      width: 40px;
+      position: relative;
+      height: 20.833vw;
+      width: 2.083vw;
       background-color: white;
 
       top: 40%;
@@ -175,8 +181,8 @@ h1,h2,h3,a,p {
 
     #right_slider{
       position: absolute;
-      height: 250px;
-      width: 40px;
+      height: 13.021vw;
+      width: 2.083vw;
       background-color: white;
 
       top: 20%;
@@ -189,8 +195,8 @@ h1,h2,h3,a,p {
 
     #right_slider2{
       position: absolute;
-      height: 50px;
-      width: 40px;
+      height: 2.604vw;
+      width: 2.083vw;
       background-color: white;
 
       top: 52%;
@@ -205,12 +211,12 @@ h1,h2,h3,a,p {
 
     .text_container{
       position: absolute;
-      top: 25%;
-      bottom: 25%;
-      left: 10%;
-      right: 10%;
+      top: 10vw;
+      bottom: 15.5vw;
+      left: 10vw;
+      right: 10vw;
 
-      padding: 10px;
+      padding: 1.041vw;
 
       .txt{
         position: relative;
@@ -220,14 +226,14 @@ h1,h2,h3,a,p {
       #upperheading{
 
         width: fit-content;
-        font-size: 45px;
+        font-size: 2.6875vw;
         font-weight: $semiBold_font600;
 
         animation: move_text1 1.5s;
       }
 
       #subheading{
-        font-size: 70px;
+        font-size: 3.2916vw;
         font-weight: $extraBold_font800;
         width: fit-content;
 
@@ -238,20 +244,20 @@ h1,h2,h3,a,p {
           position: absolute;
           top: 0;
           left: 0;
-          height: 100%;
-          width: 100%;
+          height: 5vw;
+          width: 100vw;
           background-color: $dark_color;
-          border-left: 2px solid $darker_color;
+          border-left: 0.1083vw solid $darker_color;
 
           animation: text_typing 8s steps(25) infinite;
         }
       }
 
       #heading{
-        font-size: 200px;
+        font-size: 15.833333333333332vw;
         font-weight: $extraBold_font800;
-        letter-spacing: 8px;
-        margin: -5px 0 5px -10px;
+        letter-spacing: 0.8333333333333334vw;
+        margin: -0.5208333333333334vw 0 0.5208333333333334vw -1.0416666666666667vw;
         color: transparent;
 
         animation: move_text2 1s;

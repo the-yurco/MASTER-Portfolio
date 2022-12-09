@@ -328,24 +328,26 @@ h1, h2, h3, a, p {
 
 .heroSection {
   background-color: #0d1b36;
-  height: 100vh;
+  height: 56.1251664447vw;
   font-family: "Poppins", sans-serif;
+  font-size: 0.8vw;
+  position: relative;
   /*------------------------------------*/
   /*------------------------------------*/
 }
 .heroSection nav {
   position: absolute;
   display: flex;
-  width: 100%;
+  width: 100vw;
   border-bottom: 1px solid #394867;
   -webkit-animation: slideInRight 1s;
           animation: slideInRight 1s;
 }
 .heroSection nav > .nav_section {
-  padding: 1.5rem 2rem;
+  padding: 2vw 3.33vw;
   display: flex;
-  gap: 1rem;
-  border-left: 1px solid #394867;
+  gap: 1.66vw;
+  border-left: 0.104vw solid #394867;
   align-items: center;
   justify-content: center;
 }
@@ -358,7 +360,7 @@ h1, h2, h3, a, p {
           animation: logo_start 1.4s ease-in-out forwards;
 }
 .heroSection #links_section {
-  gap: 5rem;
+  gap: 6vw;
   overflow: hidden;
   white-space: nowrap;
   /* typing text doesnt work */
@@ -378,10 +380,10 @@ h1, h2, h3, a, p {
   -webkit-animation-delay: 0.8s;
 }
 .heroSection #social_section {
-  gap: 3rem;
+  gap: 5vw;
 }
 .heroSection #social_section i {
-  font-size: 23px;
+  font-size: 1.198vw;
   -webkit-animation: links_icons_fade 1.7s ease-out;
   -webkit-animation-iteration-count: none;
   opacity: 1;
@@ -394,25 +396,30 @@ h1, h2, h3, a, p {
 }
 .heroSection #links_section a, .heroSection #social_section a, .heroSection #contact_section a {
   border: none;
-  position: relative;
 }
 .heroSection #links_section a::after, .heroSection #social_section a::after, .heroSection #contact_section a::after {
   content: "";
   position: absolute;
   width: 0px;
-  height: 3px;
-  left: 50%;
-  bottom: -5px;
+  height: 0.156vw;
+  left: 50vw;
+  bottom: -0.26vw;
   background-color: white;
-  border-radius: 3px;
+  border-radius: 0.156vw;
   transition: all ease-in-out 0.2s;
 }
 .heroSection #links_section a:hover::after, .heroSection #social_section a:hover::after, .heroSection #contact_section a:hover::after {
   width: 100%;
   left: 0;
 }
-.heroSection #logo_section, .heroSection #links_section {
+.heroSection #links_section {
   flex-basis: 33.3333333333%;
+}
+.heroSection #logo_section {
+  padding: 0 2.5vw;
+}
+.heroSection #logo_section svg {
+  height: 3.375vw;
 }
 .heroSection #logo_section a:hover::after {
   border: none;
@@ -427,9 +434,9 @@ h1, h2, h3, a, p {
           animation-delay: 0.7s;
 }
 .heroSection #left_slider {
-  position: absolute;
-  height: 400px;
-  width: 40px;
+  position: relative;
+  height: 20.833vw;
+  width: 2.083vw;
   background-color: white;
   top: 40%;
   z-index: 10000;
@@ -438,8 +445,8 @@ h1, h2, h3, a, p {
 }
 .heroSection #right_slider {
   position: absolute;
-  height: 250px;
-  width: 40px;
+  height: 13.021vw;
+  width: 2.083vw;
   background-color: white;
   top: 20%;
   right: 0;
@@ -451,8 +458,8 @@ h1, h2, h3, a, p {
 }
 .heroSection #right_slider2 {
   position: absolute;
-  height: 50px;
-  width: 40px;
+  height: 2.604vw;
+  width: 2.083vw;
   background-color: white;
   top: 52%;
   right: 0;
@@ -464,11 +471,11 @@ h1, h2, h3, a, p {
 }
 .heroSection .text_container {
   position: absolute;
-  top: 25%;
-  bottom: 25%;
-  left: 10%;
-  right: 10%;
-  padding: 10px;
+  top: 10vw;
+  bottom: 15.5vw;
+  left: 10vw;
+  right: 10vw;
+  padding: 1.041vw;
 }
 .heroSection .text_container .txt {
   position: relative;
@@ -478,13 +485,13 @@ h1, h2, h3, a, p {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 45px;
+  font-size: 2.6875vw;
   font-weight: 600;
   -webkit-animation: move_text1 1.5s;
           animation: move_text1 1.5s;
 }
 .heroSection .text_container #subheading {
-  font-size: 70px;
+  font-size: 3.2916vw;
   font-weight: 800;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -495,18 +502,18 @@ h1, h2, h3, a, p {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
+  height: 5vw;
+  width: 100vw;
   background-color: #0d1b36;
-  border-left: 2px solid #394867;
+  border-left: 0.1083vw solid #394867;
   -webkit-animation: text_typing 8s steps(25) infinite;
           animation: text_typing 8s steps(25) infinite;
 }
 .heroSection .text_container #heading {
-  font-size: 200px;
+  font-size: 15.8333333333vw;
   font-weight: 800;
-  letter-spacing: 8px;
-  margin: -5px 0 5px -10px;
+  letter-spacing: 0.8333333333vw;
+  margin: -0.5208333333vw 0 0.5208333333vw -1.0416666667vw;
   color: transparent;
   -webkit-animation: move_text2 1s;
           animation: move_text2 1s;
@@ -697,186 +704,62 @@ img {
 
 /* ==================================================== */
 .servicesSection {
-  position: relative;
-  height: 1000vh;
+  height: 140vw;
+  width: 100%;
   background-color: #0d1b36;
-  padding: 100px 10%;
+  display: grid;
+  grid-template-columns: 10vw 1fr 10vw;
+  grid-template-rows: 25vw 60vw 40vw;
+  place-items: center;
   font-family: "Poppins", sans-serif;
   transition: background 0.5s ease;
-  /*------------------------------------*/
 }
-.servicesSection .color-white {
-  background-color: white;
-}
-.servicesSection #top_slider {
-  position: absolute;
-  top: 10px;
-  left: 200rem;
-  height: 40px;
-  width: 400px;
-  background-color: #0d1b36;
-}
-.servicesSection #top_slider2 {
-  position: absolute;
-  top: 10px;
-  right: -20px;
-  height: 40px;
-  width: 40px;
-  background-color: #0d1b36;
-}
-.servicesSection #bottom_slider {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 40px;
-  width: 400px;
-  background-color: #0d1b36;
-}
-.servicesSection .services_header_container .text_h2 {
-  position: absolute;
-  top: 50px;
-  margin-bottom: 50px;
-  font-size: 70px;
-  font-weight: 800;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+.servicesSection h1, .servicesSection h2 {
   color: #0d1b36;
 }
-.servicesSection .services_header_container .fixed {
-  position: fixed;
-  top: 50px;
-  margin-bottom: 50px;
-  font-size: 70px;
-  font-weight: 800;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  color: #0d1b36;
+.servicesSection h1, .servicesSection section {
+  grid-column: 2/3;
 }
-.servicesSection .first_container_sides {
-  /* i will make for every text container */
+.servicesSection .headeris {
+  text-align: center;
+  font-size: 5vw;
+  font-weight: 600;
 }
-.servicesSection .first_container_sides .first_text_container, .servicesSection .first_container_sides .second_text_container, .servicesSection .first_container_sides .third_text_container {
-  font-size: 20px;
-  font-weight: 800;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  color: #0d1b36;
+.servicesSection section {
+  display: grid;
+  place-items: center;
+  align-content: center;
+}
+.servicesSection .hidden {
   opacity: 0;
-  -webkit-animation: h4_text_animation 0.4s;
-          animation: h4_text_animation 0.4s;
-  transition: opacity 1s;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1.35s;
 }
-.servicesSection .first_container_sides .fixed2 {
-  position: fixed;
-  top: 400px;
-  font-size: 36px;
-  font-weight: 800;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  color: #0d1b36;
+.servicesSection .show {
   opacity: 1;
-  transition: opacity 1s;
+  filter: blur(0);
+  transform: translateX(0);
 }
-.servicesSection .first_container_sides .fixed3 {
-  position: fixed;
-  top: 500px;
-  right: 10%;
-  font-size: 36px;
-  font-weight: 800;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  color: #0d1b36;
-  opacity: 1;
-  transition: opacity 1s;
+.servicesSection .qst h1 {
+  font-size: 5vw;
+  font-weight: 600;
+  transition: all 2s;
 }
-.servicesSection .second_container_side .translateX_left_h1 {
-  font-size: 700px;
-  font-weight: 800;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  color: #0d1b36;
-  opacity: 0;
-  -webkit-animation: h4_text_animation 0.4s;
-          animation: h4_text_animation 0.4s;
-  transition: opacity 1s;
+@media (prefers-reduced-motion) {
+  .servicesSection .hidden {
+    transition: none;
+  }
 }
-.servicesSection .second_container_side .translate_h1 {
-  position: fixed;
-  top: 400px;
-  right: 5%;
-  left: 5%;
-  font-size: 120px;
-  font-weight: 800;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  color: white;
-  -webkit-text-stroke: 2px #0d1b36;
-  -webkit-animation: jump_scale 1s;
-          animation: jump_scale 1s;
-}
-.servicesSection .second_container_side .scale_text_h2 {
-  font-size: 36px;
-  font-weight: 800;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  color: #0d1b36;
-  opacity: 0;
-}
-.servicesSection .second_container_side .move_h2 {
-  position: fixed;
-  top: 400px;
-  left: 40%;
-  font-size: 72px;
-  font-weight: 800;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  color: #0d1b36;
-  -webkit-animation-name: move_h2_animation;
-          animation-name: move_h2_animation;
-  -webkit-animation-duration: 2.3s;
-          animation-duration: 2.3s;
-  -webkit-animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-          animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-.servicesSection .second_container_side video {
-  position: absolute;
-  z-index: 1;
-}
-.servicesSection .third_container_side {
-  position: absolute;
+.servicesSection .lower {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  left: 10%;
-  right: 10%;
-  gap: 10px;
-  opacity: 0;
+  gap: 1rem;
+  margin: 3rem 0 0 0;
 }
-.servicesSection .third_container_side .container {
-  background-color: #0d1b36;
-  color: white;
-  height: 500px;
-  opacity: 0;
-}
-.servicesSection .third_container_side .show_containers {
-  position: fixed;
-  top: 200px;
-  background-color: #0d1b36;
-  color: white;
-  height: 500px;
-  opacity: 1;
-  -webkit-animation: show_one_by_one 0.5s;
-          animation: show_one_by_one 0.5s;
-  transition: opacity 0.5s;
+.servicesSection .lower .side_container {
+  border: 2px solid #0d1b36;
+  width: 150px;
+  height: 150px;
 }
 
 /* VARIABLES */
