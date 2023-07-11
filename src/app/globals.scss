@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// $background: '/src/assets/decoration.svg' !important;
+
+body {
+	background: #141416;
+	z-index: 1;
+
+	#hero {
+		background-image: url('/grids.png');
+		background-size: cover;
+		background-position: center;
+		z-index: 100;
+		.blurred-circle {
+			position: absolute;
+			top: 17%;
+			left: 25%;
+			z-index: 40;
+			border-radius: 100%;
+			width: 65rem;
+			height: 40rem;
+			filter: blur(100rem);
+			background-color: rgba(45, 45, 45, 1);
+		}
+	}
+}
