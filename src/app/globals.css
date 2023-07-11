@@ -6,19 +6,36 @@ body {
   z-index: 1;
 }
 body #hero {
-  background-image: url("/grids.png");
+  background-image: url("/gridy2.png");
   background-size: cover;
   background-position: center;
   z-index: 100;
 }
+body #hero main {
+  animation: drop 2s ease-in-out;
+}
 body #hero .blurred-circle {
   position: absolute;
   top: 17%;
-  left: 25%;
+  left: 23%;
   z-index: 40;
   border-radius: 100%;
   width: 65rem;
   height: 40rem;
-  filter: blur(100rem);
+  filter: blur(80px);
   background-color: rgb(45, 45, 45);
+}
+
+@keyframes drop {
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(0) scale();
+  }
+  100% {
+    transform: translateY(0);
+  }
 }/*# sourceMappingURL=globals.css.map */
