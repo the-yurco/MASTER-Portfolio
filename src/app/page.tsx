@@ -14,7 +14,24 @@ export default function Home() {
 	return (
 		<React.Fragment>
 			<section id="hero" className="grid grid-cols-6 grid-rows-6 h-screen p-5">
-				<div className="blurred-circle"></div>
+				{/* <div className="blurred-circle"></div> */}
+				<video
+					className="absolute top-0 left-0 min-w-screen min-h-screen"
+					id="background-video"
+					loop
+					autoPlay
+					muted
+					style={{
+						position: 'relative',
+						width: '100%',
+						height: '15rem',
+						left: 0,
+						top: 0
+					}}
+				>
+					<source src={'/BG.mp4'} type="video/mp4" />
+					Your browser does not support the video tag.
+				</video>
 				<header className="col-start-1 col-end-7 row-start-1 row-end-2 flex justify-end">
 					<button className="h-min">
 						<AiOutlineMenu

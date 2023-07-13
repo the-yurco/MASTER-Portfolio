@@ -9,10 +9,14 @@ body {
 	z-index: 1;
 
 	#hero {
-		background-image: url('/gridy2.png');
+		background-image: url('/BG.mp4');
 		background-size: cover;
 		background-position: center;
 		z-index: 100;
+		#background-video {
+			min-width: 100%;
+			min-height: 100%;
+		}
 		main {
 			animation: drop 2s ease-in-out;
 		}
