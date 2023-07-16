@@ -1,87 +1,54 @@
 import Image from 'next/image';
 import HeroLogo from '/src/assets/LOGO.svg';
-import {
-	AiOutlineMenu,
-	AiOutlineArrowDown,
-	AiFillGithub,
-	AiFillTwitterCircle
-} from 'react-icons/ai';
+import { CiMenuFries } from 'react-icons/ci';
 
 import React from 'react';
 import Link from 'next/link';
 
 export default function Home() {
 	return (
-		<React.Fragment>
-			<section id="hero" className="grid grid-cols-6 grid-rows-6 h-screen p-5">
-				{/* <div className="blurred-circle"></div> */}
-				<video
-					className="absolute top-0 left-0 min-w-screen min-h-screen"
-					id="background-video"
-					loop
-					autoPlay
-					muted
-					style={{
-						position: 'relative',
-						width: '100%',
-						height: '15rem',
-						left: 0,
-						top: 0
-					}}
-				>
-					<source src={'/BG.mp4'} type="video/mp4" />
-					Your browser does not support the video tag.
-				</video>
-				<header className="col-start-1 col-end-7 row-start-1 row-end-2 flex justify-end">
-					<button className="h-min">
-						<AiOutlineMenu
-							style={{ height: '40px', width: '50px', color: 'white' }}
-						/>
-					</button>
+		<div className="container mx-auto">
+			<section id="hero" className="grid grid-cols-3 grid-rows-6 h-screen pt-5">
+				<div className="blurred-circle"></div>
+				<header className="flex justify-between col-start-1 col-end-4 items-start">
+					<div className="px-3 py-1 rounded-full border border-white">
+						<h3 className="text-white text-xl">JUBO Dev</h3>
+					</div>
+					<nav>
+						<CiMenuFries className="text-white h-8 w-8" />
+					</nav>
 				</header>
-				<main className=" col-start-2 col-end-6 row-start-2 row-end-6 flex justify-center items-center flex-col gap-20  z-50">
-					<Image
-						src={HeroLogo}
-						alt={''}
-						height={400}
-						width={400}
-						className=""
-					></Image>
-					<h1 className="text-7xl text-white font-bold">JUBO Dev</h1>
+				<main className=" col-start-1 col-end-4 row-start-2 row-end-6 flex justify-center items-center z-100 flex-col gap-20">
+					<div className="rounded-lg flex items-center gap-16">
+						<hr />
+						<div
+							id="logo"
+							className="bg-gradient-to-b from-blue-500 to-purple-700 px-10 py-12 rounded-lg w-max relative"
+						>
+							<Image src={HeroLogo} alt={''} height={200} width={200}></Image>
+						</div>
+						<hr />
+					</div>
+					<div>
+						<div className="text-center flex flex-col gap-12 relative">
+							<h1 className="text-8xl" id="main-title">
+								Junior FE Web Developer
+							</h1>
+							<h2 className="text-5xl text-white">
+								with a drive to support companies <br /> in achieving their
+								creative visions
+							</h2>
+						</div>
+					</div>
 				</main>
-				<aside className=" col-start-6 col-end-7 row-start-6 row-end-7 flex flex-col items-end justify-center gap-5 z-50">
-					<Link
-						href={'https://github.com/jurco-exe'}
-						className=" hover:cursor-pointer"
-					>
-						<AiFillGithub
-							style={{ height: '40px', width: '50px', color: 'white' }}
-						/>
-					</Link>
-					<Link
-						href={'https://twitter.com/iamg30rgeee'}
-						className=" hover:cursor-pointer"
-					>
-						<AiFillTwitterCircle
-							style={{ height: '40px', width: '50px', color: 'white' }}
-						/>
-					</Link>
-				</aside>
-				<footer className="col-start-1 col-end-7 row-start-6 row-end-7 z-40 flex justify-center flex-col items-center">
-					<button className="flex justify-center flex-col items-center">
-						<AiOutlineArrowDown
-							style={{ height: '40px', width: '50px', color: 'white' }}
-						/>
-						<h3 className="text-white text-lg border-b-2 border-white w-40 text-center">
-							Scroll to Explore
-						</h3>
-					</button>
-				</footer>
 			</section>
 
-			<section id="about" className="h-screen"></section>
-
-			<section id="projects"></section>
-		</React.Fragment>
+			<section
+				id="about"
+				className="grid grid-cols-3 grid-rows-6 h-screen pt-5"
+			>
+				l;kajsdfl;kjasdf
+			</section>
+		</div>
 	);
 }

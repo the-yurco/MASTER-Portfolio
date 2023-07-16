@@ -2,13 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 body {
-  background: #141416;
+  background: #16171a;
   z-index: 1;
 }
 body #hero {
-  background-image: url("/BG.mp4");
-  background-size: cover;
-  background-position: center;
   z-index: 100;
 }
 body #hero #background-video {
@@ -18,16 +15,29 @@ body #hero #background-video {
 body #hero main {
   animation: drop 2s ease-in-out;
 }
+body #hero main hr {
+  width: 20rem;
+  height: 2px;
+  background-color: #1d74ff !important;
+  border: none;
+}
+body #hero main #logo {
+  box-shadow: 1px 10px 40px rgba(153, 0, 255, 0.4) !important;
+}
+body #hero main #main-title {
+  background: linear-gradient(to right, #1d74ff, #7e22ce) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
 body #hero .blurred-circle {
   position: absolute;
-  top: 17%;
+  top: -65%;
   left: 23%;
-  z-index: 40;
   border-radius: 100%;
   width: 65rem;
-  height: 40rem;
-  filter: blur(80px);
-  background-color: rgb(45, 45, 45);
+  height: 65rem;
+  filter: blur(100rem);
+  background: radial-gradient(rgba(0, 76, 147, 0.5), rgba(0, 76, 147, 0.3) 50%, rgba(0, 76, 147, 0.1));
 }
 
 @keyframes drop {

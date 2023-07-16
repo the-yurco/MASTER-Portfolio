@@ -1,8 +1,11 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Space_Grotesk } from 'next/font/google';
+import { Audiowide } from 'next/font/google';
 
-const spaceGrotesk = Space_Grotesk({ subsets: ['latin'] });
+const audiowide = Audiowide({
+	subsets: ['latin'],
+	weight: '400'
+});
 
 export const metadata: Metadata = {
 	title: 'Create Next App',
@@ -16,7 +19,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className={spaceGrotesk.className}>{children}</body>
+			<body className={audiowide.className}>{children}</body>
 		</html>
 	);
 }
