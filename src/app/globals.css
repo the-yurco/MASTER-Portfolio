@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Jura:wght@300;400;500;600;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,8 +13,18 @@ body #hero #background-video {
   min-width: 100%;
   min-height: 100%;
 }
+body #hero header h3 {
+  font-family: "Audiowide", cursive !important;
+}
 body #hero main {
   animation: drop 2s ease-in-out;
+}
+body #hero main h1 {
+  font-family: "Audiowide", cursive !important;
+}
+body #hero main h2 {
+  font-family: "Jura", sans-serif !important;
+  font-weight: 500;
 }
 body #hero main hr {
   width: 20rem;

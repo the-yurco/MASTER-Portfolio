@@ -47,7 +47,9 @@ export default function Home() {
 				id="about"
 				className="grid grid-cols-3 grid-rows-6 h-screen pt-5"
 			>
-				l;kajsdfl;kjasdf
+				<main>
+					<h1>Hi, I am Juraj</h1>
+				</main>
 			</section>
 		</div>
 	);

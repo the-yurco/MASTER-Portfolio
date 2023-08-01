@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-// $background: '/src/assets/decoration.svg' !important;
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Jura:wght@300;400;500;600;700&display=swap');
 
 body {
 	// overflow-x: hidden;
@@ -16,8 +16,23 @@ body {
 			min-width: 100%;
 			min-height: 100%;
 		}
+
+		header {
+			h3 {
+				font-family: 'Audiowide', cursive !important;
+			}
+		}
 		main {
 			animation: drop 2s ease-in-out;
+
+			h1 {
+				font-family: 'Audiowide', cursive !important;
+			}
+
+			h2 {
+				font-family: 'Jura', sans-serif !important;
+				font-weight: 500;
+			}
 
 			hr {
 				width: 20rem;
